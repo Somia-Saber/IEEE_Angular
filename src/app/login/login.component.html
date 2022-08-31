@@ -1,0 +1,69 @@
+
+<!-- ** Main Banner Area Start ** -->
+<section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+        <source src="assets/images/course-video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+        <div class="caption">
+            <section class="ftco-section">
+                <div class="container">
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 col-lg-5">
+                            <div class="login-wrap p-4 p-md-5">
+                          <div class="icon d-flex align-items-center justify-content-center">
+                              <span class="fa fa-user-o"></span>
+                          </div>
+                          <h3 class="text-center mb-4 text-white" >Login</h3>
+                            <!-- <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)" class="login-form form--hidden" id="login"> -->
+                                <form [formGroup]="login" (ngSubmit)="saveData()" class="login-form form--hidden" id="login">
+
+                                <div class="form-group">
+                                <!-- <div  class="form__message form__message--error text-white" >Incorrect username or password</div> -->
+                                <div class="form__input-group">
+                                  <input type="text" class="form-control rounded-left form__input"  autofocus  placeholder="Username" formControlName="Username" required>
+                                  <!-- <div class="form__input-error-message text-white" >This is an error message</div> -->
+                             <br>
+                                </div>
+                              </div>
+                        
+                          <div class="form__input-group">
+                                
+                          <input type="password" class="form-control rounded-left"  placeholder="Password" formControlName="Password" required>
+                          <div class="form__input-error-message text-white" ></div>
+
+                        </div>
+                        <p class="form__text">
+                            <a href="#" class="form__link"> Forget your Password</a>
+                        </p>
+                        <p class="form__text">
+                         <p class="text-white"> Dont have any account?  <a class="form__link" href="signUp.html" id="linksCreateAccounts">  create an account</a>
+                        </p>
+                       
+                        <div class="form-group">
+                            <button class="form-control btn btn-primary rounded submit px-3"type="submit">Login</button>
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                                <label class="checkbox-wrap checkbox-primary" style="color:aliceblue">Remember Me
+                                              <input type="checkbox" checked>
+                                              <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="w-50 text-md-right">
+                                            <a href="#">Forgot Password</a>
+                                        </div>
+                        </div>
+                      </form>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>
